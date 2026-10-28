@@ -1,49 +1,45 @@
-# QR-code maken — VectorCraft-plugin
+# VectorCraft QR Code Plugin
 
-Zet tekst of een URL om naar een bewerkbare vector-QR-code in het open VectorCraft-document. Getest met VectorCraft 0.17.0.
+Turn text or a URL into an editable vector QR code in your open VectorCraft document. Works entirely offline. Tested with VectorCraft 0.17.0.
 
-[Download de plugin](QR-code-maken.wasm) (open het bestand in VectorCraft om te installeren).
+**[Download the plugin](https://github.com/breakerh/vectorcraft-qr-code/releases/latest/download/vectorcraft-qr-code.wasm)** · [Releases](https://github.com/breakerh/vectorcraft-qr-code/releases)
 
-## Gebruik
+## Installation
 
-1. Open je document en hef bij voorkeur de bestaande selectie op.
-2. Kies **Object → Plug-ins → QR-code maken…**.
-3. Vul je tekst of volledige URL in, bijvoorbeeld `https://example.com`.
-4. Kies het formaat in millimeters (inclusief de scanmarge) en de foutcorrectie. M is een goede standaard.
-5. Laat de witte achtergrond aan voor een betrouwbare lichte scanmarge, of schakel hem uit als de ondergrond al egaal wit is.
-6. Klik **OK**. De code verschijnt midden op het tekenbord als een zwart vectorpad met meerdere gesloten deelpaden, plus eventueel een apart wit achtergrondvlak.
+1. Download `vectorcraft-qr-code.wasm` from the link above.
+2. In VectorCraft, choose **Object → Plug-ins → Install Plug-in…** and select the file. You can also use **File → Open**.
+3. Accept the prompt for a larger computation budget. This allows longer input to be encoded; the plugin runs locally in the background and can be cancelled.
 
-Je kunt de objecten groeperen, verplaatsen en proportioneel schalen. De invoeging kan met één keer Ongedaan maken worden teruggedraaid. Als er objecten geselecteerd waren, bewaart de plugin die ongewijzigd; VectorCraft kan ze samen met de nieuwe QR-code geselecteerd houden.
+Use the installation command rather than the Additional Plug-ins Folder: folder loading skips plugins that request a larger computation budget. No Rust installation or compilation is needed to use the downloaded plugin.
 
-De code is statisch: opnieuw openen van de plugin maakt een nieuwe code. Voor een andere URL maak je een nieuwe code en verwijder je de vorige.
+## Usage
 
-## Installeerbestand
+1. Open your document and preferably deselect any existing artwork.
+2. Choose **Object → Plug-ins → Generate QR Code…**.
+3. Enter your text or a complete URL, such as `https://example.com`.
+4. Set the size in millimeters, including the quiet zone, and choose an error correction level. M is a good default.
+5. Leave **White background** enabled to keep the quiet zone light. Disable it only when the underlying artwork already provides a plain white background.
+6. Click **OK**. The plugin adds the code at the center of the artboard as a black vector path containing closed subpaths, plus an optional separate white background.
 
-Open `QR-code-maken.wasm` via Bestand → Openen of Object → Plug-ins → Plug-in installeren. De plugin gebruikt VectorCrafts grotere rekenbudget voor langere teksten. Bevestig de melding daarover tijdens installatie. Hij rekent lokaal, draait op de achtergrond en kan worden geannuleerd. Gebruik voor deze plugin de installatieoptie; een map met extra plugins slaat plugins met dit budget over.
+Group, move, recolor, or scale the resulting artwork proportionally. One Undo reverses the insertion. Existing selected objects are preserved, but VectorCraft may keep them selected together with the new QR code.
 
+Codes are static. Running the plugin again creates a new code; to change a URL, generate a new code and remove the previous one.
 
+## Features and limits
 
-## Eigenschappen
+- Editable vector paths; no embedded raster image.
+- Entirely offline: no network access, account, subscription, or tracking service.
+- Sizes from 10 to 1000 mm, including a quiet zone of four QR modules on each side.
+- L, M, Q, and H error correction. The encoder may increase correction if it fits within the same QR dimensions.
+- Unicode text encoded as UTF-8; leading and trailing spaces are preserved.
+- Automatic QR version selection. Input that exceeds QR capacity produces an error; capacity depends on content and error correction. The text field accepts up to 4096 characters.
+- Dense codes at small print sizes have very small modules. Test the final printed result with a scanner.
 
-- Volledig offline; geen netwerk, account, abonnement of trackingdienst.
-- Bewerkbare vectorpaden, zonder rasterafbeelding.
-- Formaat 10–1000 mm, inclusief vier QR-modules scanmarge rondom.
-- Foutcorrectie L, M, Q of H. De encoder kan foutcorrectie verhogen als dezelfde QR-afmetingen dat toelaten.
-- Unicode-tekst wordt als UTF-8 verwerkt; ingevoerde spaties worden behouden.
-- QR-versie wordt automatisch gekozen. Te lange invoer krijgt een foutmelding; capaciteit hangt af van tekst en foutcorrectie. Het tekstveld neemt maximaal 4096 tekens aan.
-- Kleine afdrukformaten met veel tekst geven zeer kleine modules. Controleer de uiteindelijke afdruk met een scanner.
+The plugin uses VectorCraft plug-in ABI v1 with string parameters and the heavy computation budget. Older hosts that lack these features may not support it.
 
-## Validatie
+## Build from source
 
-- Drie Rust-tests: behoud bestaande selectie/formaat/positie, foutmeldingen, Unicode/transparante achtergrond.
-- 24 uitvoeringen van het echte WASM-bestand teruggelezen met ZXing, byte voor byte gelijk aan de invoer. Onder andere URL-queryparameters, Unicode, spaties en 1000 bytes tekst, op alle vier niveaus.
-- Getest in wasmi 2.0.0 met het rekenbudget van de host, tot 2953 bytes bij niveau L; geschikte langere gevallen slagen en overschrijding van QR-capaciteit geeft een foutmelding.
-- Geen WASM-hostimports.
-- Native VectorCraft: installatie, dialoog en vectorvoorvertoning met de standaard-URL gecontroleerd. Definitieve build geïnstalleerd en bestandshash geverifieerd. Een volledige hertest van de definitieve dialoog staat nog open.
-
-## Zelf bouwen
-
-Vereist Rust met het doelplatform wasm32-unknown-unknown:
+Install Rust with the `wasm32-unknown-unknown` target, then run:
 
 ```sh
 rustup target add wasm32-unknown-unknown
@@ -51,7 +47,21 @@ cargo test --locked
 cargo build --locked --release --target wasm32-unknown-unknown
 ```
 
-Resultaat: `target/wasm32-unknown-unknown/release/vectorcraft_qr_code.wasm`.
+The compiled plugin is `target/wasm32-unknown-unknown/release/vectorcraft_qr_code.wasm`. Rename it to `vectorcraft-qr-code.wasm` for distribution.
 
-Plugin-ABI: https://github.com/storytold/vectorcraft/blob/main/docs/plugins.md
-QR-encoder: https://github.com/nayuki/QR-Code-generator
+## Validation
+
+- Three Rust tests cover preservation of existing objects, dimensions and placement, invalid input, Unicode, and a transparent background.
+- 24 runs of the compiled WASM were decoded with ZXing and matched their input byte for byte. Cases include URL query parameters, Unicode, spaces, and 1000 bytes of text at all four error correction levels.
+- Tested with wasmi 2.0.0 using the host computation budget, up to 2953 bytes at level L. Inputs beyond QR capacity return an error.
+- The WASM has no host imports.
+- Native VectorCraft installation, parameter dialog, and vector preview were checked with the default URL before the English translation. A full native UI retest of the English build remains outstanding.
+
+The checked-in JSON reports record the encoder validation. Translation does not change the QR encoding algorithm.
+
+## License and references
+
+MIT license. Dependency notices are included in [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt).
+
+- [VectorCraft plug-in API](https://github.com/storytold/vectorcraft/blob/main/docs/plugins.md)
+- [Nayuki QR Code generator](https://github.com/nayuki/QR-Code-generator)

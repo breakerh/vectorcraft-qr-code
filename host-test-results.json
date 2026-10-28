@@ -3,120 +3,120 @@
     "bytes": 18,
     "ec": "L (7%)",
     "error": null,
-    "fuel": 6555212
+    "fuel": 6554148
   },
   {
     "bytes": 18,
     "ec": "M (15%)",
     "error": null,
-    "fuel": 6125861
+    "fuel": 6125653
   },
   {
     "bytes": 18,
     "ec": "Q (25%)",
     "error": null,
-    "fuel": 6125861
+    "fuel": 6125653
   },
   {
     "bytes": 18,
     "ec": "H (30%)",
     "error": null,
-    "fuel": 8003383
+    "fuel": 8003175
   },
   {
     "bytes": 256,
     "ec": "L (7%)",
     "error": null,
-    "fuel": 30121013
+    "fuel": 30119949
   },
   {
     "bytes": 256,
     "ec": "M (15%)",
     "error": null,
-    "fuel": 38837390
+    "fuel": 38837076
   },
   {
     "bytes": 256,
     "ec": "Q (25%)",
     "error": null,
-    "fuel": 51195008
+    "fuel": 51194694
   },
   {
     "bytes": 256,
     "ec": "H (30%)",
     "error": null,
-    "fuel": 70062779
+    "fuel": 70062465
   },
   {
     "bytes": 1000,
     "ec": "L (7%)",
     "error": null,
-    "fuel": 102201912
+    "fuel": 102200848
   },
   {
     "bytes": 1000,
     "ec": "M (15%)",
     "error": null,
-    "fuel": 134573311
+    "fuel": 134572997
   },
   {
     "bytes": 1000,
     "ec": "Q (25%)",
     "error": null,
-    "fuel": 181817517
+    "fuel": 181817203
   },
   {
     "bytes": 1000,
     "ec": "H (30%)",
     "error": null,
-    "fuel": 232832732
+    "fuel": 232832418
   },
   {
     "bytes": 2000,
     "ec": "L (7%)",
     "error": null,
-    "fuel": 216219220
+    "fuel": 216218156
   },
   {
     "bytes": 2000,
     "ec": "M (15%)",
     "error": null,
-    "fuel": 261358491
+    "fuel": 261358177
   },
   {
     "bytes": 2000,
     "ec": "Q (25%)",
-    "error": "Deze tekst is te lang voor een QR-code met deze foutcorrectie. Gebruik minder tekst of een lager niveau.",
-    "fuel": 366870
+    "error": "This text is too long for a QR code at this error correction level. Shorten the text or choose a lower level.",
+    "fuel": 367000
   },
   {
     "bytes": 2000,
     "ec": "H (30%)",
-    "error": "Deze tekst is te lang voor een QR-code met deze foutcorrectie. Gebruik minder tekst of een lager niveau.",
-    "fuel": 351106
+    "error": "This text is too long for a QR code at this error correction level. Shorten the text or choose a lower level.",
+    "fuel": 351236
   },
   {
     "bytes": 2953,
     "ec": "L (7%)",
     "error": null,
-    "fuel": 287639829
+    "fuel": 287638659
   },
   {
     "bytes": 2953,
     "ec": "M (15%)",
-    "error": "Deze tekst is te lang voor een QR-code met deze foutcorrectie. Gebruik minder tekst of een lager niveau.",
-    "fuel": 465471
+    "error": "This text is too long for a QR code at this error correction level. Shorten the text or choose a lower level.",
+    "fuel": 465707
   },
   {
     "bytes": 2953,
     "ec": "Q (25%)",
-    "error": "Deze tekst is te lang voor een QR-code met deze foutcorrectie. Gebruik minder tekst of een lager niveau.",
-    "fuel": 465471
+    "error": "This text is too long for a QR code at this error correction level. Shorten the text or choose a lower level.",
+    "fuel": 465707
   },
   {
     "bytes": 2953,
     "ec": "H (30%)",
-    "error": "Deze tekst is te lang voor een QR-code met deze foutcorrectie. Gebruik minder tekst of een lager niveau.",
-    "fuel": 465471
+    "error": "This text is too long for a QR code at this error correction level. Shorten the text or choose a lower level.",
+    "fuel": 465707
   }
 ]

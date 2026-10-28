@@ -4,13 +4,13 @@ use serde::Serialize;
 use serde_json::{Value, json};
 
 const MANIFEST: &str = r#"{
- "id":"nl.bram.vectorcraft.qrcode","name":"QR-code maken","version":"1.0.0","kind":"filter","budget":"heavy",
- "author":"Bram","description":"Voeg tekst of een URL toe als een bewerkbare vector-QR-code. Werkt volledig offline.",
+ "id":"nl.bram.vectorcraft.qrcode","name":"Generate QR Code","version":"1.0.1","kind":"filter","budget":"heavy",
+ "author":"Bram","description":"Add text or a URL as an editable vector QR code. Works entirely offline.",
  "params":{
-  "tekst":{"type":"string","default":"https://example.com","maxLength":4096,"label":"Tekst of URL"},
-  "formaat":{"type":"number","min":10,"max":1000,"default":30,"label":"Formaat incl. scanmarge","unit":"mm"},
-  "foutcorrectie":{"type":"choice","options":["L (7%)","M (15%)","Q (25%)","H (30%)"],"default":"M (15%)","label":"Foutcorrectie"},
-  "witteAchtergrond":{"type":"bool","default":true,"label":"Witte achtergrond"}
+  "text":{"type":"string","default":"https://example.com","maxLength":4096,"label":"Text or URL"},
+  "size":{"type":"number","min":10,"max":1000,"default":30,"label":"Size including quiet zone","unit":"mm"},
+  "errorCorrection":{"type":"choice","options":["L (7%)","M (15%)","Q (25%)","H (30%)"],"default":"M (15%)","label":"Error correction"},
+  "whiteBackground":{"type":"bool","default":true,"label":"White background"}
  }
 }"#;
 
@@ -121,11 +121,11 @@ fn object(name: &str, subpaths: Vec<Subpath>, k: f64) -> Item {
     })
 }
 fn build(doc: &Value, p: &Value) -> Result<Output, String> {
-    let text = p["tekst"].as_str().unwrap_or("");
+    let text = p["text"].as_str().unwrap_or("");
     if text.trim().is_empty() {
-        return Err("Vul tekst of een URL in.".into());
+        return Err("Enter text or a URL.".into());
     }
-    let ec = match p["foutcorrectie"]
+    let ec = match p["errorCorrection"]
         .as_str()
         .unwrap_or("M (15%)")
         .chars()
@@ -137,11 +137,11 @@ fn build(doc: &Value, p: &Value) -> Result<Output, String> {
         _ => QrCodeEcc::Medium,
     };
     let Ok(code) = QrCode::encode_text(text, ec) else {
-        return Err("Deze tekst is te lang voor een QR-code met deze foutcorrectie. Gebruik minder tekst of een lager niveau.".into());
+        return Err("This text is too long for a QR code at this error correction level. Shorten the text or choose a lower level.".into());
     };
-    let mm = p["formaat"].as_f64().unwrap_or(30.0);
+    let mm = p["size"].as_f64().unwrap_or(30.0);
     if !mm.is_finite() || !(10.0..=1000.0).contains(&mm) {
-        return Err("Kies een formaat tussen 10 en 1000 mm.".into());
+        return Err("Choose a size between 10 and 1000 mm.".into());
     }
     let size = mm * 72.0 / 25.4;
     let board = p["_context"]["artboard"].as_array();
@@ -160,9 +160,9 @@ fn build(doc: &Value, p: &Value) -> Result<Output, String> {
         .flatten()
         .filter_map(|o| o.get("id").map(|id| Item::Existing { id: id.clone() }))
         .collect();
-    if p["witteAchtergrond"].as_bool().unwrap_or(true) {
+    if p["whiteBackground"].as_bool().unwrap_or(true) {
         objects.push(object(
-            "QR-code — witte scanmarge",
+            "QR code - white quiet zone",
             vec![rect(x, y, size, size)],
             0.0,
         ));
@@ -189,7 +189,7 @@ fn build(doc: &Value, p: &Value) -> Result<Output, String> {
             ));
         }
     }
-    objects.push(object("QR-code", paths, 1.0));
+    objects.push(object("QR code", paths, 1.0));
     Ok(Output { objects })
 }
 
@@ -256,7 +256,7 @@ mod tests {
     fn preserve_selection_and_size() {
         let out = generate(
             &json!({"objects":[{"id":42,"path":{"custom":true}}]}),
-            &json!({"tekst":"https://example.com","formaat":30,"_context":{"artboard":[100,200,700,1000]}}),
+            &json!({"text":"https://example.com","size":30,"_context":{"artboard":[100,200,700,1000]}}),
         );
         assert_eq!(out["objects"][0], json!({"id":42}));
         assert_eq!(out["objects"].as_array().unwrap().len(), 3);
@@ -271,7 +271,7 @@ mod tests {
     fn invalid_and_overflow() {
         for text in ["".to_owned(), "  ".to_owned(), "x".repeat(4000)] {
             assert!(
-                generate(&json!({"objects":[]}), &json!({"tekst":text}))
+                generate(&json!({"objects":[]}), &json!({"text":text}))
                     .get("error")
                     .is_some()
             );
@@ -281,7 +281,7 @@ mod tests {
     fn unicode_and_transparent() {
         let out = generate(
             &json!({"objects":[]}),
-            &json!({"tekst":"Café — 日本語 🐈","witteAchtergrond":false}),
+            &json!({"text":"Café — 日本語 🐈","whiteBackground":false}),
         );
         assert_eq!(out["objects"].as_array().unwrap().len(), 1);
         assert!(

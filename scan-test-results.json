@@ -2,145 +2,145 @@
   {
     "text": "https://example.com",
     "ec": "L (7%)",
-    "fuel": 2846232,
+    "fuel": 2846022,
     "decoded": true
   },
   {
     "text": "https://example.com",
     "ec": "M (15%)",
-    "fuel": 2846354,
+    "fuel": 2845924,
     "decoded": true
   },
   {
     "text": "https://example.com",
     "ec": "Q (25%)",
-    "fuel": 2846357,
+    "fuel": 2845927,
     "decoded": true
   },
   {
     "text": "https://example.com",
     "ec": "H (30%)",
-    "fuel": 3696494,
+    "fuel": 3696064,
     "decoded": true
   },
   {
     "text": "https://example.org/product?size=30&color=black",
     "ec": "L (7%)",
-    "fuel": 4809261,
+    "fuel": 4809051,
     "decoded": true
   },
   {
     "text": "https://example.org/product?size=30&color=black",
     "ec": "M (15%)",
-    "fuel": 4809295,
+    "fuel": 4809041,
     "decoded": true
   },
   {
     "text": "https://example.org/product?size=30&color=black",
     "ec": "Q (25%)",
-    "fuel": 5968409,
+    "fuel": 5968155,
     "decoded": true
   },
   {
     "text": "https://example.org/product?size=30&color=black",
     "ec": "H (30%)",
-    "fuel": 7384932,
+    "fuel": 7384674,
     "decoded": true
   },
   {
     "text": "Hello world",
     "ec": "L (7%)",
-    "fuel": 1971892,
+    "fuel": 1971506,
     "decoded": true
   },
   {
     "text": "Hello world",
     "ec": "M (15%)",
-    "fuel": 1971882,
+    "fuel": 1971540,
     "decoded": true
   },
   {
     "text": "Hello world",
     "ec": "Q (25%)",
-    "fuel": 2907160,
+    "fuel": 2906818,
     "decoded": true
   },
   {
     "text": "Hello world",
     "ec": "H (30%)",
-    "fuel": 2907159,
+    "fuel": 2906817,
     "decoded": true
   },
   {
     "text": "Café — 日本語 🐈",
     "ec": "L (7%)",
-    "fuel": 2768554,
+    "fuel": 2768094,
     "decoded": true
   },
   {
     "text": "Café — 日本語 🐈",
     "ec": "M (15%)",
-    "fuel": 2768544,
+    "fuel": 2768128,
     "decoded": true
   },
   {
     "text": "Café — 日本語 🐈",
     "ec": "Q (25%)",
-    "fuel": 3760307,
+    "fuel": 3759891,
     "decoded": true
   },
   {
     "text": "Café — 日本語 🐈",
     "ec": "H (30%)",
-    "fuel": 3760306,
+    "fuel": 3759890,
     "decoded": true
   },
   {
     "text": "  exact text  ",
     "ec": "L (7%)",
-    "fuel": 1969732,
+    "fuel": 1982264,
     "decoded": true
   },
   {
     "text": "  exact text  ",
     "ec": "M (15%)",
-    "fuel": 2805358,
+    "fuel": 2862383,
     "decoded": true
   },
   {
     "text": "  exact text  ",
     "ec": "Q (25%)",
-    "fuel": 2805361,
+    "fuel": 2862386,
     "decoded": true
   },
   {
     "text": "  exact text  ",
     "ec": "H (30%)",
-    "fuel": 3770980,
+    "fuel": 3795497,
     "decoded": true
   },
   {
     "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "ec": "L (7%)",
-    "fuel": 49566374,
+    "fuel": 49565984,
     "decoded": true
   },
   {
     "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "ec": "M (15%)",
-    "fuel": 64877150,
+    "fuel": 64876804,
     "decoded": true
   },
   {
     "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "ec": "Q (25%)",
-    "fuel": 86639688,
+    "fuel": 86639342,
     "decoded": true
   },
   {
     "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "ec": "H (30%)",
-    "fuel": 110803783,
+    "fuel": 110803437,
     "decoded": true
   }
 ]
