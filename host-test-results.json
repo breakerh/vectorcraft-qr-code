@@ -1,0 +1,122 @@
+[
+  {
+    "bytes": 18,
+    "ec": "L (7%)",
+    "error": null,
+    "fuel": 6555212
+  },
+  {
+    "bytes": 18,
+    "ec": "M (15%)",
+    "error": null,
+    "fuel": 6125861
+  },
+  {
+    "bytes": 18,
+    "ec": "Q (25%)",
+    "error": null,
+    "fuel": 6125861
+  },
+  {
+    "bytes": 18,
+    "ec": "H (30%)",
+    "error": null,
+    "fuel": 8003383
+  },
+  {
+    "bytes": 256,
+    "ec": "L (7%)",
+    "error": null,
+    "fuel": 30121013
+  },
+  {
+    "bytes": 256,
+    "ec": "M (15%)",
+    "error": null,
+    "fuel": 38837390
+  },
+  {
+    "bytes": 256,
+    "ec": "Q (25%)",
+    "error": null,
+    "fuel": 51195008
+  },
+  {
+    "bytes": 256,
+    "ec": "H (30%)",
+    "error": null,
+    "fuel": 70062779
+  },
+  {
+    "bytes": 1000,
+    "ec": "L (7%)",
+    "error": null,
+    "fuel": 102201912
+  },
+  {
+    "bytes": 1000,
+    "ec": "M (15%)",
+    "error": null,
+    "fuel": 134573311
+  },
+  {
+    "bytes": 1000,
+    "ec": "Q (25%)",
+    "error": null,
+    "fuel": 181817517
+  },
+  {
+    "bytes": 1000,
+    "ec": "H (30%)",
+    "error": null,
+    "fuel": 232832732
+  },
+  {
+    "bytes": 2000,
+    "ec": "L (7%)",
+    "error": null,
+    "fuel": 216219220
+  },
+  {
+    "bytes": 2000,
+    "ec": "M (15%)",
+    "error": null,
+    "fuel": 261358491
+  },
+  {
+    "bytes": 2000,
+    "ec": "Q (25%)",
+    "error": "Deze tekst is te lang voor een QR-code met deze foutcorrectie. Gebruik minder tekst of een lager niveau.",
+    "fuel": 366870
+  },
+  {
+    "bytes": 2000,
+    "ec": "H (30%)",
+    "error": "Deze tekst is te lang voor een QR-code met deze foutcorrectie. Gebruik minder tekst of een lager niveau.",
+    "fuel": 351106
+  },
+  {
+    "bytes": 2953,
+    "ec": "L (7%)",
+    "error": null,
+    "fuel": 287639829
+  },
+  {
+    "bytes": 2953,
+    "ec": "M (15%)",
+    "error": "Deze tekst is te lang voor een QR-code met deze foutcorrectie. Gebruik minder tekst of een lager niveau.",
+    "fuel": 465471
+  },
+  {
+    "bytes": 2953,
+    "ec": "Q (25%)",
+    "error": "Deze tekst is te lang voor een QR-code met deze foutcorrectie. Gebruik minder tekst of een lager niveau.",
+    "fuel": 465471
+  },
+  {
+    "bytes": 2953,
+    "ec": "H (30%)",
+    "error": "Deze tekst is te lang voor een QR-code met deze foutcorrectie. Gebruik minder tekst of een lager niveau.",
+    "fuel": 465471
+  }
+]

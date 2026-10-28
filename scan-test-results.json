@@ -1,0 +1,146 @@
+[
+  {
+    "text": "https://example.com",
+    "ec": "L (7%)",
+    "fuel": 2846232,
+    "decoded": true
+  },
+  {
+    "text": "https://example.com",
+    "ec": "M (15%)",
+    "fuel": 2846354,
+    "decoded": true
+  },
+  {
+    "text": "https://example.com",
+    "ec": "Q (25%)",
+    "fuel": 2846357,
+    "decoded": true
+  },
+  {
+    "text": "https://example.com",
+    "ec": "H (30%)",
+    "fuel": 3696494,
+    "decoded": true
+  },
+  {
+    "text": "https://example.org/product?size=30&color=black",
+    "ec": "L (7%)",
+    "fuel": 4809261,
+    "decoded": true
+  },
+  {
+    "text": "https://example.org/product?size=30&color=black",
+    "ec": "M (15%)",
+    "fuel": 4809295,
+    "decoded": true
+  },
+  {
+    "text": "https://example.org/product?size=30&color=black",
+    "ec": "Q (25%)",
+    "fuel": 5968409,
+    "decoded": true
+  },
+  {
+    "text": "https://example.org/product?size=30&color=black",
+    "ec": "H (30%)",
+    "fuel": 7384932,
+    "decoded": true
+  },
+  {
+    "text": "Hello world",
+    "ec": "L (7%)",
+    "fuel": 1971892,
+    "decoded": true
+  },
+  {
+    "text": "Hello world",
+    "ec": "M (15%)",
+    "fuel": 1971882,
+    "decoded": true
+  },
+  {
+    "text": "Hello world",
+    "ec": "Q (25%)",
+    "fuel": 2907160,
+    "decoded": true
+  },
+  {
+    "text": "Hello world",
+    "ec": "H (30%)",
+    "fuel": 2907159,
+    "decoded": true
+  },
+  {
+    "text": "Café — 日本語 🐈",
+    "ec": "L (7%)",
+    "fuel": 2768554,
+    "decoded": true
+  },
+  {
+    "text": "Café — 日本語 🐈",
+    "ec": "M (15%)",
+    "fuel": 2768544,
+    "decoded": true
+  },
+  {
+    "text": "Café — 日本語 🐈",
+    "ec": "Q (25%)",
+    "fuel": 3760307,
+    "decoded": true
+  },
+  {
+    "text": "Café — 日本語 🐈",
+    "ec": "H (30%)",
+    "fuel": 3760306,
+    "decoded": true
+  },
+  {
+    "text": "  exact text  ",
+    "ec": "L (7%)",
+    "fuel": 1969732,
+    "decoded": true
+  },
+  {
+    "text": "  exact text  ",
+    "ec": "M (15%)",
+    "fuel": 2805358,
+    "decoded": true
+  },
+  {
+    "text": "  exact text  ",
+    "ec": "Q (25%)",
+    "fuel": 2805361,
+    "decoded": true
+  },
+  {
+    "text": "  exact text  ",
+    "ec": "H (30%)",
+    "fuel": 3770980,
+    "decoded": true
+  },
+  {
+    "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "ec": "L (7%)",
+    "fuel": 49566374,
+    "decoded": true
+  },
+  {
+    "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "ec": "M (15%)",
+    "fuel": 64877150,
+    "decoded": true
+  },
+  {
+    "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "ec": "Q (25%)",
+    "fuel": 86639688,
+    "decoded": true
+  },
+  {
+    "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "ec": "H (30%)",
+    "fuel": 110803783,
+    "decoded": true
+  }
+]
