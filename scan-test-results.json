@@ -26,49 +26,49 @@
   {
     "text": "https://example.org/product?size=30&color=black",
     "ec": "L (7%)",
-    "fuel": 4809051,
+    "fuel": 3812095,
     "decoded": true
   },
   {
     "text": "https://example.org/product?size=30&color=black",
     "ec": "M (15%)",
-    "fuel": 4809041,
+    "fuel": 4812774,
     "decoded": true
   },
   {
     "text": "https://example.org/product?size=30&color=black",
     "ec": "Q (25%)",
-    "fuel": 5968155,
+    "fuel": 6130971,
     "decoded": true
   },
   {
     "text": "https://example.org/product?size=30&color=black",
     "ec": "H (30%)",
-    "fuel": 7384674,
+    "fuel": 7449855,
     "decoded": true
   },
   {
     "text": "Hello world",
     "ec": "L (7%)",
-    "fuel": 1971506,
+    "fuel": 1990036,
     "decoded": true
   },
   {
     "text": "Hello world",
     "ec": "M (15%)",
-    "fuel": 1971540,
+    "fuel": 1989938,
     "decoded": true
   },
   {
     "text": "Hello world",
     "ec": "Q (25%)",
-    "fuel": 2906818,
+    "fuel": 1989941,
     "decoded": true
   },
   {
     "text": "Hello world",
     "ec": "H (30%)",
-    "fuel": 2906817,
+    "fuel": 2962879,
     "decoded": true
   },
   {
@@ -98,25 +98,25 @@
   {
     "text": "  exact text  ",
     "ec": "L (7%)",
-    "fuel": 1982264,
+    "fuel": 1955020,
     "decoded": true
   },
   {
     "text": "  exact text  ",
     "ec": "M (15%)",
-    "fuel": 2862383,
+    "fuel": 1955010,
     "decoded": true
   },
   {
     "text": "  exact text  ",
     "ec": "Q (25%)",
-    "fuel": 2862386,
+    "fuel": 2874472,
     "decoded": true
   },
   {
     "text": "  exact text  ",
     "ec": "H (30%)",
-    "fuel": 3795497,
+    "fuel": 2874471,
     "decoded": true
   },
   {
